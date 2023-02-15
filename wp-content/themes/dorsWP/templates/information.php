@@ -1,39 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
+<?php
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Полезная информация</title>
-</head>
+/*
+Template Name: Полезная информация
+*/
 
-<body>
-  <!-- Меню -->
-	<div class="menu">
-		<div class="container">
-			<div class="row">
-				<div class="logo">
-					<a href="index.html">
-						<img src="img/logo.png" alt="логотип">
-					</a>
-				</div>
-				<ul>
-					<li><a href="index.html">Главная</a></li>
-					<li><a href="about.html">О компании</a></li>
-					<li><a href="catalog.html">Каталог</a></li>
-					<li><a href="order.html">На заказ</a></li>
-					<li><a href="portfolio.html">Наши работы</a></li>
-					<li><a href="contacts.html">Контакты</a></li>
-				</ul>
-				<div class="phone">
-					<a href="tel:+79186687673">&#9742; +7 (918) 668-76-73</a>
-				</div>
-			</div>
-		</div>
-	</div>
+get_header();
+
+?>
   <!-- Полезная информация -->
   <div class="information_page">
     <div class="container">
@@ -46,23 +19,23 @@
 			<div class="row information_grid">
 				<div class="col-3 col-lg-6 col-sm-12">
 					<img src="img/decoration/1/1.jpg">
-					<h3>ГЛАДКАЯ ПОЛОСА</h3>  
+					<h3>ГЛАДКАЯ ПОЛОСА</h3>
 				</div>
 				<div class="col-3 col-lg-6 col-sm-12">
 					<img src="img/decoration/1/2.jpg">
-					<h3>ЛОЗА ВИНОГРАДА</h3>  
+					<h3>ЛОЗА ВИНОГРАДА</h3>
 				</div>
 				<div class="col-3 col-lg-6 col-sm-12">
 					<img src="img/decoration/1/3.jpg">
-					<h3>ГРЕЧЕСКАЯ ПОЛОСА</h3>  
+					<h3>ГРЕЧЕСКАЯ ПОЛОСА</h3>
 				</div>
 				<div class="col-3 col-lg-6 col-sm-12">
 					<img src="img/decoration/1/4.jpg">
-					<h3>РАКУШКА</h3>  
+					<h3>РАКУШКА</h3>
 				</div>
 				<div class="col-3 col-lg-6 col-sm-12">
 					<img src="img/decoration/1/5.jpg">
-					<h3>КОРА ДЕРЕВА</h3>  
+					<h3>КОРА ДЕРЕВА</h3>
 				</div>
 			</div>
 			<!-- Ручки -->
@@ -74,7 +47,7 @@
 			<div class="row information_grid">
 				<div class="col-3 col-lg-6 col-sm-12">
 					<img src="img/decoration/2/1.jpg">
-					<h3>BAROCCO SM AB-7 МАТОВАЯ БРОНЗА</h3>  
+					<h3>BAROCCO SM AB-7 МАТОВАЯ БРОНЗА</h3>
 				</div>
 			</div>
 			<!-- Элементы ковки -->
@@ -86,7 +59,7 @@
 			<div class="row information_grid">
 				<div class="col-3 col-lg-6 col-sm-12">
 					<img src="img/decoration/3/1.jpg">
-					<h3>19590</h3>  
+					<h3>19590</h3>
 				</div>
 			</div>
 			<!-- Цвет -->
@@ -98,7 +71,7 @@
 			<div class="row information_grid">
 				<div class="col-3 col-lg-6 col-sm-12">
 					<img src="img/decoration/4/1.jpg">
-					<h3>ЧЕРНОЕ ЗОЛОТО (N24099)</h3>  
+					<h3>ЧЕРНОЕ ЗОЛОТО (N24099)</h3>
 				</div>
 			</div>
 			<!-- Рисунок МДФ 10мм -->
@@ -110,7 +83,7 @@
 			<div class="row information_grid">
 				<div class="col-3 col-lg-6 col-sm-12">
 					<img src="img/decoration/5/1.jpg">
-					<h3>№2 (ГЛУХАЯ)</h3>  
+					<h3>№2 (ГЛУХАЯ)</h3>
 				</div>
 			</div>
 			<!-- Рисунок МДФ 16мм -->
@@ -122,7 +95,7 @@
 			<div class="row information_grid">
 				<div class="col-3 col-lg-6 col-sm-12">
 					<img src="img/decoration/6/1.jpg">
-					<h3>№2 (ГЛУХАЯ)</h3>  
+					<h3>№2 (ГЛУХАЯ)</h3>
 				</div>
 			</div>
 			<!-- Цвета МДФ -->
@@ -134,21 +107,10 @@
 			<div class="row information_grid">
 				<div class="col-3 col-lg-6 col-sm-12">
 					<img src="img/decoration/7/1.jpg">
-					<h3>БЕЛОЕ ДЕРЕВО</h3>  
+					<h3>БЕЛОЕ ДЕРЕВО</h3>
 				</div>
 			</div>
     </div>
   </div>
   <!-- Футер -->
-	<div class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-12 text-center">
-					<a href="policy.html">Политика конфиденциальности</a> <span class="accent-color">&copy; </span> Двери Жовнер, 2021
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
-
-</html>
+  <?php get_footer(); ?>
