@@ -1,39 +1,12 @@
-<!DOCTYPE html>
-<html lang="ru">
+<?php
 
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
-	<link rel="stylesheet" href="css/style.css">
-	<title>Главная</title>
-</head>
+/*
+Template Name: Главная
+*/
 
-<body>
-	<!-- Меню -->
-	<div class="menu">
-		<div class="container">
-			<div class="row">
-				<div class="logo">
-					<a href="index.html">
-						<img src="img/logo.png" alt="логотип">
-					</a>
-				</div>
-				<ul>
-					<li><a href="index.html">Главная</a></li>
-					<li><a href="about.html">О компании</a></li>
-					<li><a href="catalog.html">Каталог</a></li>
-					<li><a href="order.html">На заказ</a></li>
-					<li><a href="portfolio.html">Наши работы</a></li>
-					<li><a href="contacts.html">Контакты</a></li>
-				</ul>
-				<div class="phone">
-					<a href="tel:+79186687673">&#9742; +7 (918) 668-76-73</a>
-				</div>
-			</div>
-		</div>
-	</div>
+get_header();
+
+?>
 	<!-- Шапка -->
 	<div class="header" style="background-image: url(img/header.png)">
 		<div class="container">
@@ -93,27 +66,27 @@
 					<img src="img/icons/quality.png" alt="">
 					<h3>КАЧЕСТВО ОТДЕЛКИ</h3>
 					<p>Технологический процесс, применяемый в производстве, по праву можно назвать безупречным и на сегодняшний день не имеющий аналогов на других предприятиях.</p>
-				</div>	
+				</div>
 				<div class="col-4 col-lg-6 col-sm-12 advantages-card">
 					<img src="img/icons/list.png" alt="">
 					<h3>АССОРТИМЕНТ</h3>
 					<p>Производство имеет возможность выпуска достаточно широкого списка продукции В нём вы найдёте эксклюзивные двери, надежные ворота, экстерьерные ограждения, современные навесы и прочие</p>
-				</div>	
+				</div>
 				<div class="col-4 col-lg-6 col-sm-12 advantages-card">
 					<img src="img/icons/gears.png" alt="">
 					<h3>КАЧЕСТВО СБОРКИ</h3>
 					<p>Вся продукция имеет явное преимущество в качестве сборки за счет индивидуального, а не поточного стиля организации производственного процесса. Все детали изделий проходят химическую и пескоструйную обработку.</p>
-				</div>	
+				</div>
 				<div class="col-4 col-lg-6 col-sm-12 advantages-card">
 					<img src="img/icons/home.png" alt="">
 					<h3>СРОК СЛУЖБЫ</h3>
 					<p>Безупречное качество отделки и высокое качество сборки могут с достоинством заявлять о длительном сроке эксплуатации наших изделий в любом регионе нашей страны.</p>
-				</div>	
+				</div>
 				<div class="col-4 col-lg-6 col-sm-12 advantages-card">
 					<img src="img/icons/handshake.png" alt="">
 					<h3>ИНФОРМАЦИЯ ПАРТНЕРАМ</h3>
 					<p>Для приобретения нашего товара с целью дальнейшей реализации мы предоставляем дилерам специальные условия и цены. Мы всегда открыты к диалогу и взаимовыгодному сотрудничеству.</p>
-				</div>		
+				</div>
 			</div>
 		</div>
 	</div>
@@ -222,15 +195,4 @@
 		</div>
 	</div>
 	<!-- Футер -->
-	<div class="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-12 text-center">
-					<a href="policy.html">Политика конфиденциальности</a> <span class="accent-color">&copy; </span> Двери Жовнер, 2021
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
-
-</html>
+  <?php get_footer(); ?>

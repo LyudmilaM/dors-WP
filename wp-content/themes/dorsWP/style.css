@@ -1,3 +1,9 @@
+/*
+Theme Name: dorsWP
+Author: Minkhaidarova L.
+Description: Internet shop
+Version: 1.0
+*/
 /* Переменные */
 :root {
   --text-dark: #222;
@@ -55,7 +61,7 @@ input, textarea {
   display: flex;
   list-style: none;
   text-transform: uppercase;
-} 
+}
 .menu .row > ul > li {
   position: relative;
 }
@@ -425,7 +431,7 @@ input, textarea {
   text-transform: uppercase;
   font-weight: bold;
 }
-.door-description form input:not([type="submit"]), 
+.door-description form input:not([type="submit"]),
 .door-description form textarea {
   display: block;
   border: 1px solid var(--text-small);
@@ -529,7 +535,7 @@ input, textarea {
 .page-numbers.prev,
 .page-numbers.next,
 .page-numbers.dots {
-  
+
 }
 /* Контакты */
 .our-contacts {
@@ -693,7 +699,7 @@ input, textarea {
     font-size: 16px;
   }
   .to-order-form input:not([type="submit"]),
-  .door-description form input:not([type="submit"]), 
+  .door-description form input:not([type="submit"]),
   .door-description form textarea {
     width: 100%;
   }
@@ -716,7 +722,7 @@ input, textarea {
   .advantages h2 {
     font-size: 16px;
   }
-  .header-inner h2, 
+  .header-inner h2,
   .popular-title h2 {
     text-align: center;
     font-size: 16px;
