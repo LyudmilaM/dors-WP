@@ -5,6 +5,12 @@
   add_action( 'after_setup_theme', 'add_menu');
 
   function add_scripts_and_styles(){
+
+    if(is_page_template( 'templates/portfolio.php' )){
+      wp_enqueue_style( 'baguetteBox',  get_template_directory_uri() . '/assets/css/baguetteBox.min.css');
+      wp_enqueue_script( 'baguetteBox',  get_template_directory_uri() . '/assets/js/baguetteBox.min.js', null, null, true);
+    }
+
     wp_enqueue_style( 'style',  get_stylesheet_uri());
   }
 
@@ -23,5 +29,8 @@
     register_nav_menu( 'top', 'Главное меню сайта' );
     register_nav_menu( 'bottom', 'Политика конфидициальнсти' );
   }
+
+
+  // js/baguetteBox.min.js
 
 ?>
