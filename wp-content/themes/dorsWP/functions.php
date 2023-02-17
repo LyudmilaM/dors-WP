@@ -15,14 +15,16 @@
   }
 
   function add_features(){
+    add_theme_support('post-thumbnails', array( 'post' ));
     add_theme_support( 'custom-logo', [
       'height'      => 50,
       'width'       => 100,
       'flex-width'  => false,
       'flex-height' => false,
       'header-text' => '',
-      'unlink-homepage-logo' => true, // WP 5.5
+      'unlink-homepage-logo' => true, // WP 5.5 - на главной странице у логотипа будет обертка <span>, на остальных страницах - ссылка <a> на главную страницу, поэтому свою обертку с сылкой для логотипа делать не надо.
     ] );
+    add_image_size('adv_thumbnail', 100, 100, true);
   }
 
   function add_menu(){

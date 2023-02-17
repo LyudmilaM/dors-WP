@@ -23,11 +23,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="logo">
-					<a href="<?= home_url(); ?>">
 
 						<?php the_custom_logo(); ?>
 
-					</a>
 				</div>
 				<?php
           wp_nav_menu( [

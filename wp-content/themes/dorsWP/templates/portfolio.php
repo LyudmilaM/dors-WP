@@ -24,6 +24,7 @@ get_header();
                 <?php
               }
             ?>
+
           </div>
         </div>
       </div>
