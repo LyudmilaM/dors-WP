@@ -32,7 +32,4 @@
     register_nav_menu( 'bottom', 'Политика конфидициальнсти' );
   }
 
-
-  // js/baguetteBox.min.js
-
 ?>
