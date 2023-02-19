@@ -15,6 +15,10 @@
       wp_enqueue_script( 'list',  get_template_directory_uri() . '/assets/js/list.min.js', null, null, true);
     }
 
+    if(is_category( 'doors' )){
+      wp_enqueue_script( 'mixitup',  get_template_directory_uri() . '/assets/js/mixitup.min.js', null, null, true);
+    }
+
     wp_enqueue_style( 'style',  get_stylesheet_uri());
   }
 
@@ -36,5 +40,19 @@
     register_nav_menu( 'top', 'Главное меню сайта' );
     register_nav_menu( 'bottom', 'Политика конфидициальнсти' );
   }
+
+  // Изменяем шаблон пагинации, чтобы не было тега <h2>
+  // Но так как в нашей версии wordpress стандартный заголовок wordpress
+  // скрыт стилями WP, его роль только для скрин ридеров, то закомментирую этот код
+
+  // add_filter('navigation_markup_template', 'my_navigation_template', 10, 2);
+  // function my_navigation_template( $template, $class){
+  //   return '
+  //     <nav class="navigation %1$s" role="navigation">
+  //       <div class="nav-links">%3$s</div>
+  //     </nav>
+  //   ';
+  // }
+
 
 ?>
