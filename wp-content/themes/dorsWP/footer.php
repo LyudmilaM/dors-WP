@@ -9,7 +9,9 @@
               'items_wrap' => '%3$s' // отображение элемента меню без обертки (ul)
             ] );
           ?>
-					<span class="accent-color">&copy; </span> Двери Жовнер, 2021
+
+          <span class="accent-color">&copy; </span> <?= bloginfo( 'name' ) ?>, 2020-<?= date('Y'); ?>
+
 				</div>
 			</div>
 		</div>
