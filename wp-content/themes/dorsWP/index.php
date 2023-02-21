@@ -67,92 +67,68 @@ get_header();
 		</div>
 	</div>
 	<!-- Популярные товары -->
-	<div class="popular" style="background-image: url(img/background.jpg)">
+	<div class="popular" style="background-image: url(<?= CFS()->get('bg_2'); ?>)">
 		<div class="container">
 			<div class="row popular-title">
-				<h2>ПОПУЛЯРНЫЕ ТОВАРЫ</h2>
+				<h2><?= CFS()->get('popular_title'); ?></h2>
 			</div>
 			<div class="row popular-goods">
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
-				<div class="col-3 col-lg-6 col-sm-12 product">
-					<img src="img/сatalog/door_anglia.png" alt="Название">
-					<h3>Название</h3>
-					<div>45000 &#8381;</div>
-					<a href="door.html" class="btn">Подробнее</a>
-				</div>
+
+        <?php
+          $posts = get_posts([
+            'numberposts' => -1,
+            'category_name' => 'doors_popular',
+            'orderby' => 'title',
+            'order' => 'ASC',
+            'post_type' => 'post',
+            'suppress_filters' => true,
+          ]);
+          foreach($posts as $post){
+            setup_postdata( $post );
+            ?>
+
+            <div class="col-3 col-lg-6 col-sm-12 product">
+              <?php the_post_thumbnail(); ?>
+              <h3><?php the_title(); ?></h3>
+              <div><?= CFS()->get('doors_price'); ?> &#8381;</div>
+              <a href="<?php the_permalink(); ?>" class="btn"><?= CFS()->get('doors_more'); ?></a>
+            </div>
+
+            <?php
+          }
+          wp_reset_postdata();
+        ?>
 			</div>
 			<div class="row">
 				<div class="col-12 text-center">
-					<a href="catalog.html" class="btn">Перейти в каталог</a>
+          <a href="/category/<?= CFS()->get('catalog_btn_link'); ?>" class="btn"><?= CFS()->get('about_btn_text'); ?></a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<!-- Форма обратной связи -->
-	<div class="contacts" style="background-image: url(img/bg-contacts.png)">
+	<div class="contacts" style="background-image: url(<?= CFS()->get('request_a_call_bg'); ?>)">
 		<div class="container">
 			<div class="row">
 				<div class="col-4 col-lg-12 contacts-item">
-					<h3>Закажите звонок специалиста</h3>
-					<p>Вы можете заказать звонок нашего специалиста в удобное для Вас время.</p>
-					<form action="">
-						<input type="text" placeholder="Имя">
-						<input type="text" placeholder="Телефон">
-						<input type="text" placeholder="Когда позвонить?">
-						<button class="btn">Заказать звонок</button>
-					</form>
+
+					<h3><?= CFS()->get('request_a_call_form_title'); ?></h3>
+					<p><?= CFS()->get('request_a_call_form_text'); ?></p>
+					<?= do_shortcode(CFS()->get('request_a_call_form_shortcode')); ?>
 				</div>
-				<div class="col-4 col-lg-6 col-sm-12 text-center contacts-item">
-					<img src="img/icons/tag.png" alt="Подробно">
-					<h3>Подробно</h3>
-					<p>Наши специалисты помогут Вам в выборе нужной двери.</p>
-				</div>
-				<div class="col-4 col-lg-6 col-sm-12 text-center contacts-item">
-					<img src="img/icons/clock.png" alt="Быстро">
-					<h3>Быстро</h3>
-					<p>Мы стараемся максимально быстро ответить на Ваш запрос.</p>
-				</div>
+
+        <?php
+          $loop = CFS()->get('call_advantage');
+          foreach ($loop as $row){
+            ?>
+            <div class="col-4 col-lg-6 col-sm-12 text-center contacts-item">
+              <img src="<?= $row['call_advantage_img']; ?>" alt="Подробно">
+              <h3><?= $row['call_advantage_title']; ?></h3>
+              <p><?= $row['call_advantage_text']; ?></p>
+            </div>
+            <?php
+          }
+        ?>
 			</div>
 		</div>
 	</div>
